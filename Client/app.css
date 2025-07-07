@@ -1,0 +1,110 @@
+body {
+    background-image: url('https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1470&q=80'); /* apartment bg */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Overlay for contrast */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.6);
+    z-index: -1;
+}
+
+.form {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 30px 40px;
+    margin: 50px auto;
+    max-width: 500px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255,255,255,0.3);
+    text-align: center;
+}
+
+h2 {
+    margin-top: 20px;
+}
+
+input.area, select.location {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Radio button styling */
+.switch-field {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.switch-field input[type="radio"] {
+    display: none;
+}
+
+.switch-field label {
+    background-color: #e0e0e0;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    color: #000;
+}
+
+.switch-field input[type="radio"]:checked + label {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.submit {
+    background-color: #00b894;
+    color: white;
+    padding: 14px 25px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border-radius: 8px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.submit:hover {
+    background-color: #019875;
+    transform: scale(1.05);
+}
+
+/* Location select2 dropdown */
+.select2-container {
+    width: 100% !important;
+}
+
+.select2-selection {
+    height: 42px !important;
+    padding-top: 6px;
+}
+
+/* Result styling */
+.result {
+    margin-top: 20px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #ffffff;
+}
